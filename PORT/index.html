@@ -154,33 +154,6 @@
     .work-card:hover .view-project { color: var(--blue); }
     .project-card.is-hidden { display: none; }
 
-    .visual-forma { background: #d7d8dc; }
-    .visual-forma::before { content: ""; position: absolute; width: 54%; aspect-ratio: 1; border-radius: 50%; background: var(--blue); right: 9%; top: 11%; }
-    .visual-forma::after { content: "F"; position: absolute; left: 10%; bottom: -11%; font-size: 18rem; letter-spacing: -.14em; font-weight: 700; line-height: 1; color: var(--ink); }
-
-    .visual-noma { background: #c8c9c5; }
-    .visual-noma::before { content: ""; position: absolute; width: 48%; height: 73%; left: 26%; top: 15%; border: 1.3rem solid var(--ink); border-radius: 50% 50% 6% 6%; }
-    .visual-noma::after { content: "NOMA"; position: absolute; bottom: 12%; left: 0; width: 100%; text-align: center; font-size: 1.1rem; letter-spacing: .33em; font-weight: 600; color: var(--ink); }
-
-    .visual-index { background: var(--ink); }
-    .visual-index::before { content: ""; position: absolute; inset: 11%; background: repeating-linear-gradient(90deg, #f9f9fb 0 1px, transparent 1px 22%); opacity: .92; }
-    .visual-index::after { content: "INDEX"; position: absolute; left: 8%; bottom: 7%; color: var(--paper); font-size: clamp(3rem, 8vw, 6rem); line-height: 1; letter-spacing: -.09em; font-weight: 700; }
-
-    .visual-aperture { background: #e9e5de; }
-    .visual-aperture::before { content: ""; position: absolute; width: 58%; aspect-ratio: 1; left: 21%; top: 19%; border-radius: 50%; border: 2.2rem solid var(--blue); }
-    .visual-aperture::after { content: ""; position: absolute; width: 1px; height: 130%; left: 50%; top: -15%; background: var(--ink); transform: rotate(45deg); }
-
-    .visual-mono { background: var(--blue); }
-    .visual-mono::before { content: "M"; position: absolute; left: 6%; top: -19%; font-size: 20rem; letter-spacing: -.16em; font-weight: 700; line-height: 1; color: var(--ink); }
-    .visual-mono::after { content: ""; position: absolute; width: 23%; aspect-ratio: 1; right: 14%; bottom: 17%; border: 1px solid var(--ink); border-radius: 50%; }
-
-    .visual-field { background: #e1e0d8; }
-    .visual-field::before { content: ""; position: absolute; left: 14%; top: 13%; width: 68%; height: 74%; border: 1px solid var(--ink); transform: rotate(-7deg); }
-    .visual-field::after { content: "FIELD\nNOTES"; white-space: pre; position: absolute; left: 24%; top: 28%; font-size: clamp(2.3rem, 5vw, 4rem); line-height: .86; letter-spacing: -.08em; font-weight: 700; color: var(--ink); }
-
-    .service-row { border-top: 1px solid var(--line); }
-    .service-row:last-child { border-bottom: 1px solid var(--line); }
-
     .reveal { opacity: 0; transform: translateY(1.25rem); transition: opacity .65s ease, transform .65s ease; }
     .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
@@ -245,7 +218,7 @@
    <main id="top">
    <section class="page-width py-12 md:py-16">
   <div class="grid items-center gap-10 lg:grid-cols-2">
-    <!-- LEFT SIDE: Title + Bio magkasama -->
+    <!-- LEFT SIDE: Title + Bio -->
     <div class="reveal flex flex-col justify-center space-y-6">
       <div>
         <p data-template-id="hero-eyebrow" class="canva-text mb-3 text-xs font-semibold tracking-[.14em]" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 16px; letter-spacing: 0.14rem;">FREELANCER / 2026</p>
@@ -260,17 +233,15 @@
         <p data-template-id="availability-tag" class="canva-tag inline-flex border border-[#2563EB] px-3 py-2 text-xs font-medium tracking-[.04em]" style="background: rgb(249, 249, 251); color: rgb(37, 99, 235); font-weight: 500; font-style: normal; font-size: 12px;">● Available for freelance</p>
       </div>
     </div>
-<!-- RIGHT SIDE: Interactive Profile Card -->
+    <!-- RIGHT SIDE: Interactive Profile Card -->
     <div class="reveal flex flex-col items-center">
       <button type="button" class="group relative w-full aspect-square max-h-[460px] overflow-hidden border border-[#E5E5E7] bg-[#eeeeef] text-left transition-all duration-300 hover:border-[#111111] hover:shadow-lg focus-ring" data-project="profile" aria-haspopup="dialog">
  <img src="jsn.jpg" alt="Profile Graphic Designer" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]" />
-        <!-- Hover Badge Indicator -->
         <div class="absolute bottom-4 right-4 bg-black/80 backdrop-blur text-white text-[11px] font-semibold tracking-[.1em] px-3 py-1.5 uppercase transition-opacity opacity-90 group-hover:opacity-100">
           Click to Know Me ↗
         </div>
       </button>
 
-      <!-- Label / Button sa ilalim ng picture -->
       <button type="button" class="mt-4 inline-flex items-center gap-2 text-xs font-semibold tracking-[.14em] uppercase text-[#111111] hover:text-[#2563EB] transition-colors focus-ring" data-project="profile">
         <span>About Jason Magalona</span>
         <span class="text-sm">→</span>
@@ -285,7 +256,12 @@
         <p data-template-id="work-label" class="canva-text mb-4 text-xs font-semibold tracking-[.14em]" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 16px; letter-spacing: 0.14rem;">01 / MY WORKS</p>
         <h2 data-template-id="work-title" class="canva-text text-4xl font-bold tracking-[-.06em] md:text-6xl" style="color: rgb(17, 17, 17); font-weight: 700; font-style: normal; font-size: 24px; letter-spacing: -0.06rem;">Built for attention.</h2>
        </div>
-       <div class="flex flex-wrap gap-2" aria-label="Filter projects"><button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">All</button> <button type="button" class="filter-button" data-filter="poster" aria-pressed="false">Esport Poster Design</button> <button type="button" class="filter-button" data-filter="SOCMED" aria-pressed="false">SOCIAL MEDIA DESIGN</button> <button type="button" class="filter-button" data-filter="business" aria-pressed="false">Business Poster Design</button> <button type="button" class="filter-button" data-filter="POSTER" aria-pressed="false">Poster Design</button>
+       <div class="flex flex-wrap gap-2" aria-label="Filter projects">
+         <button type="button" class="filter-button is-active" data-filter="all" aria-pressed="true">All</button> 
+         <button type="button" class="filter-button" data-filter="poster" aria-pressed="false">Esport Poster Design</button> 
+         <button type="button" class="filter-button" data-filter="SOCMED" aria-pressed="false">SOCIAL MEDIA DESIGN</button> 
+         <button type="button" class="filter-button" data-filter="business" aria-pressed="false">Business Poster Design</button> 
+         <button type="button" class="filter-button" data-filter="POSTER" aria-pressed="false">Poster Design</button>
        </div>
       </div>
      <div id="project-grid" class="grid gap-x-6 gap-y-12 md:grid-cols-2">
@@ -298,10 +274,10 @@
             </div>
             <div class="mt-4 flex items-start justify-between gap-4">
               <div>
-                <h3 data-template-id="forma-title" class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 20px;">CROSSFIRE LEGENDS ESPORT</h3>
-                <p data-template-id="forma-meta" class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-style: normal; font-size: 14px;">Esport Poster — 2026</p>
+                <h3 class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 20px;">CROSSFIRE LEGENDS ESPORT</h3>
+                <p class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 14px;">Esport Poster — 2026</p>
               </div>
-              <span data-template-id="forma-view" class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em] transition-colors" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 16px;">VIEW PROJECT →</span>
+              <span class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 16px;">VIEW PROJECT →</span>
             </div>
           </button>
         </article>
@@ -314,10 +290,10 @@
             </div>
             <div class="mt-4 flex items-start justify-between gap-4">
               <div>
-                <h3 data-template-id="noma-title" class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 20px;">AW-ASEN FALLS at Ilocos Sur</h3>
-                <p data-template-id="noma-meta" class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-style: normal; font-size: 14px;">Social Media Design — 2025</p>
+                <h3 class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 20px;">AW-ASEN FALLS at Ilocos Sur</h3>
+                <p class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 14px;">Social Media Design — 2025</p>
               </div>
-              <span data-template-id="noma-view" class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em] transition-colors" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 16px;">VIEW PROJECT →</span>
+              <span class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 16px;">VIEW PROJECT →</span>
             </div>
           </button>
         </article>
@@ -330,10 +306,10 @@
             </div>
             <div class="mt-4 flex items-start justify-between gap-4">
               <div>
-                <h3 data-template-id="index-title" class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 20px;">AUTOMOTIVE CREATIVE AD</h3>
-                <p data-template-id="index-meta" class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-style: normal; font-size: 14px;">Social Media Design — 2025</p>
+                <h3 class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 20px;">AUTOMOTIVE CREATIVE AD</h3>
+                <p class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 14px;">Social Media Design — 2025</p>
               </div>
-              <span data-template-id="index-view" class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em] transition-colors" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 16px;">VIEW PROJECT →</span>
+              <span class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 16px;">VIEW PROJECT →</span>
             </div>
           </button>
         </article>
@@ -346,14 +322,15 @@
             </div>
             <div class="mt-4 flex items-start justify-between gap-4">
               <div>
-                <h3 data-template-id="aperture-title" class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 20px;">Jurassic: The Black Red Giant</h3>
-                <p data-template-id="aperture-meta" class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-style: normal; font-size: 14px;">Poster — 2024</p>
+                <h3 class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 20px;">Jurassic: The Black Red Giant</h3>
+                <p class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 14px;">Poster — 2024</p>
               </div>
-              <span data-template-id="aperture-view" class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em] transition-colors" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 16px;">VIEW PROJECT →</span>
+              <span class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 16px;">VIEW PROJECT →</span>
             </div>
           </button>
         </article>
-       <!-- CARD 5: BUSINESS MENU POSTER -->
+
+        <!-- CARD 5: BUSINESS MENU POSTER -->
         <article class="project-card reveal" data-category="business">
           <button type="button" class="work-card focus-ring" data-project="business" aria-haspopup="dialog">
             <div class="project-visual overflow-hidden" style="height: 17rem;">
@@ -361,15 +338,15 @@
             </div>
             <div class="mt-4 flex items-start justify-between gap-4">
               <div>
-                <h3 data-template-id="mono-title" class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 20px;">FOOD HUB MENU</h3>
-                <p data-template-id="mono-meta" class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-style: normal; font-size: 14px;">Business Poster Design — 2024</p>
+                <h3 class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 20px;">FOOD HUB MENU</h3>
+                <p class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 14px;">Business Poster Design — 2024</p>
               </div>
-              <span data-template-id="mono-view" class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em] transition-colors" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 16px;">VIEW PROJECT →</span>
+              <span class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 16px;">VIEW PROJECT →</span>
             </div>
           </button>
         </article>
 
-   <!-- CARD 6: BINI AIAH POSTER -->
+        <!-- CARD 6: BINI AIAH POSTER -->
         <article class="project-card reveal" data-category="SOCMED">
           <button type="button" class="work-card focus-ring" data-project="field" aria-haspopup="dialog">
             <div class="project-visual overflow-hidden" style="height: 17rem;">
@@ -377,14 +354,15 @@
             </div>
             <div class="mt-4 flex items-start justify-between gap-4">
               <div>
-                <h3 data-template-id="field-title" class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 20px;">BINI AIAH Poster</h3>
-                <p data-template-id="field-meta" class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-style: normal; font-size: 14px;">Social Media Design — 2026</p>
+                <h3 class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 20px;">BINI AIAH Poster</h3>
+                <p class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 14px;">Social Media Design — 2026</p>
               </div>
-              <span data-template-id="field-view" class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em] transition-colors" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 16px;">VIEW PROJECT →</span>
+              <span class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 16px;">VIEW PROJECT →</span>
             </div>
           </button>
         </article>
-<!-- CARD 7: BLUE SINGULARITY -->
+
+        <!-- CARD 7: BLUE SINGULARITY -->
         <article class="project-card reveal" data-category="POSTER">
           <button type="button" class="work-card focus-ring" data-project="netflix" aria-haspopup="dialog">
             <div class="project-visual overflow-hidden" style="height: 17rem;">
@@ -392,10 +370,10 @@
             </div>
             <div class="mt-4 flex items-start justify-between gap-4">
               <div>
-                <h3 class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 20px;">Blue Singularity: Netflix Series Concept Poster</h3>
-                <p class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-style: normal; font-size: 14px;">Poster Design — 2026</p>
+                <h3 class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 20px;">Blue Singularity: Netflix Series Concept Poster</h3>
+                <p class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 14px;">Poster Design — 2026</p>
               </div>
-              <span class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em] transition-colors" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 16px;">VIEW PROJECT →</span>
+              <span class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 16px;">VIEW PROJECT →</span>
             </div>
           </button>
         </article>
@@ -408,15 +386,15 @@
             </div>
             <div class="mt-4 flex items-start justify-between gap-4">
               <div>
-                <h3 class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 20px;">Predator: The Hunted Fugitive</h3>
-                <p class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-style: normal; font-size: 14px;">Poster Design — 2026</p>
+                <h3 class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 20px;">Predator: The Hunted Fugitive</h3>
+                <p class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 14px;">Poster Design — 2026</p>
               </div>
-              <span class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em]" style="color: rgb(17, 17, 17); font-weight: 600; font-style: normal; font-size: 16px;">VIEW PROJECT →</span>
+              <span class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 16px;">VIEW PROJECT →</span>
             </div>
           </button>
         </article>
 
-        <!-- CARD 9: LEFT -->
+        <!-- CARD 9 -->
         <article class="project-card reveal" data-category="POSTER">
           <button type="button" class="work-card focus-ring" data-project="project9" aria-haspopup="dialog">
             <div class="project-visual overflow-hidden" style="height: 17rem;">
@@ -432,7 +410,7 @@
           </button>
         </article>
 
-        <!-- CARD 10: RIGHT -->
+        <!-- CARD 10 -->
         <article class="project-card reveal" data-category="POSTER">
           <button type="button" class="work-card focus-ring" data-project="project10" aria-haspopup="dialog">
             <div class="project-visual overflow-hidden" style="height: 17rem;">
@@ -448,7 +426,7 @@
           </button>
         </article>
 
-        <!-- CARD 11: LEFT -->
+        <!-- CARD 11 -->
         <article class="project-card reveal" data-category="POSTER">
           <button type="button" class="work-card focus-ring" data-project="project11" aria-haspopup="dialog">
             <div class="project-visual overflow-hidden" style="height: 17rem;">
@@ -464,7 +442,7 @@
           </button>
         </article>
 
-        <!-- CARD 12: RIGHT -->
+        <!-- CARD 12 -->
         <article class="project-card reveal" data-category="POSTER">
           <button type="button" class="work-card focus-ring" data-project="project12" aria-haspopup="dialog">
             <div class="project-visual overflow-hidden" style="height: 17rem;">
@@ -480,10 +458,43 @@
           </button>
         </article>
 
+        <!-- CARD 13 -->
+        <article class="project-card reveal" data-category="poster">
+          <button type="button" class="work-card focus-ring" data-project="project13" aria-haspopup="dialog">
+            <div class="project-visual overflow-hidden" style="height: 17rem;">
+              <img src="31.jpg" alt="Project 13" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+            </div>
+            <div class="mt-4 flex items-start justify-between gap-4">
+              <div>
+                <h3 class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 20px;">ESPORTS TOURNAMENT ROSTER POSTER</h3>
+                <p class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 14px;">Esport Poster Design — 2025</p>
+              </div>
+              <span class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 16px;">VIEW PROJECT →</span>
+            </div>
+          </button>
+        </article>
+
+        <!-- CARD 14 (Right side) - Esport Poster (33.jpg) -->
+        <article class="project-card reveal" data-category="poster">
+          <button type="button" class="work-card focus-ring" data-project="project14" aria-haspopup="dialog">
+            <div class="project-visual overflow-hidden" style="height: 17rem;">
+              <img src="33.jpg" alt="Project 14" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+            </div>
+            <div class="mt-4 flex items-start justify-between gap-4">
+              <div>
+                <h3 class="canva-text text-xl font-semibold tracking-[-.04em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 20px;">Team Liquid PH vs. Team Falcon PH: Home of Champions Esports Poster</h3>
+                <p class="canva-text mt-1 text-sm text-[#656569]" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 14px;">Esport Poster — 2025</p>
+              </div>
+              <span class="canva-link view-project shrink-0 text-xs font-semibold tracking-[.08em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 16px;">VIEW PROJECT →</span>
+            </div>
+          </button>
+        </article>
+
       </div>
      </div>
     </section>
-  <section id="about" class="section-anchor section-rule">
+
+    <section id="about" class="section-anchor section-rule">
      <div class="page-width py-16 md:py-24">
        <div class="grid gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,.95fr)]">
          <div class="reveal">
@@ -495,10 +506,7 @@
              I specialize in visual identities, dynamic poster designs, cinematic photo manipulations, motion graphics, and social media advertising. Combining creative curation, detailed color grading, and smooth video editing to deliver high-impact digital content.
            </p>
            
-           <!-- APPS & TOOLS STACK -->
            <div class="mt-12 border-t border-[#E5E5E7]">
-              
-             <!-- 1. Canva -->
              <div class="grid grid-cols-[12rem_1fr] gap-4 border-b border-[#E5E5E7] py-4 items-center">
                <div class="flex items-center gap-3">
                  <img src="canva.jpg" alt="Canva Logo" class="w-8 h-8 rounded-lg object-contain shrink-0" />
@@ -507,7 +515,6 @@
                <p class="canva-text text-sm leading-relaxed" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 15px;">Poster layouts, social media advertising designs, branding assets, and typography compositions.</p>
              </div>
 
-             <!-- 2. Adobe Lightroom -->
              <div class="grid grid-cols-[12rem_1fr] gap-4 border-b border-[#E5E5E7] py-4 items-center">
                <div class="flex items-center gap-3">
                  <img src="https://upload.wikimedia.org/wikipedia/commons/b/b6/Adobe_Photoshop_Lightroom_CC_logo.svg" alt="Lightroom Logo" class="w-8 h-8 rounded-lg object-contain shrink-0" />
@@ -516,7 +523,6 @@
                <p class="canva-text text-sm leading-relaxed" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 15px;">Advanced color grading, tone adjustments, cinematic mood styling, and lighting enhancement.</p>
              </div>
 
-             <!-- 3. Alight Motion -->
              <div class="grid grid-cols-[12rem_1fr] gap-4 border-b border-[#E5E5E7] py-4 items-center">
                <div class="flex items-center gap-3">
                  <img src="alightmotion.png" alt="Alight Motion Logo" class="w-8 h-8 rounded-lg object-contain shrink-0 border border-[#E5E5E7]" onerror="this.src='https://raw.githubusercontent.com/simple-icons/simple-icons/develop/icons/alightmotion.svg'" />
@@ -525,7 +531,6 @@
                <p class="canva-text text-sm leading-relaxed" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 15px;">Keyframe animation, visual effects, motion graphics, and typography transitions.</p>
              </div>
 
-             <!-- 4. CapCut -->
              <div class="grid grid-cols-[12rem_1fr] gap-4 border-b border-[#E5E5E7] py-4 items-center">
                <div class="flex items-center gap-3">
                  <img src="capcut.png" alt="CapCut Logo" class="w-8 h-8 rounded-lg object-contain shrink-0" />
@@ -534,7 +539,6 @@
                <p class="canva-text text-sm leading-relaxed" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 15px;">Short-form video editing, rhythmic beat syncing, dynamic transitions, and reels/TikTok production.</p>
              </div>
 
-             <!-- 5. Freepik -->
              <div class="grid grid-cols-[12rem_1fr] gap-4 border-b border-[#E5E5E7] py-4 items-center">
                <div class="flex items-center gap-3">
                  <img src="freepik.png" onerror="this.src='https://asset.brandfetch.io/idf-185pGj/id1_l_b15y.svg'" alt="Freepik Logo" class="w-8 h-8 rounded-lg object-contain shrink-0" />
@@ -543,7 +547,6 @@
                <p class="canva-text text-sm leading-relaxed" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 15px;">High-resolution asset sourcing, PSD templates, 3D elements, textures, and vector illustrations.</p>
              </div>
 
-             <!-- 6. Pinterest -->
              <div class="grid grid-cols-[12rem_1fr] gap-4 border-b border-[#E5E5E7] py-4 items-center">
                <div class="flex items-center gap-3">
                  <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="Pinterest Logo" class="w-8 h-8 rounded-lg object-contain shrink-0" />
@@ -551,25 +554,22 @@
                </div>
                <p class="canva-text text-sm leading-relaxed" style="color: rgb(101, 101, 105); font-weight: 400; font-size: 15px;">Visual moodboards, creative concept curation, aesthetic inspiration, and layout ideation.</p>
              </div>
-
            </div>
 
-           <!-- CORE SKILLS / WORKFLOW FOCUS -->
            <div class="mt-9">
              <p class="canva-text mb-3 text-xs font-semibold tracking-[.14em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 16px; letter-spacing: 0.14rem;">WORKFLOW FOCUS</p>
              <p class="canva-text text-sm leading-relaxed" style="color: rgb(17, 17, 17); font-weight: 500; font-size: 16px;">Poster Design / Color Grading / Motion Graphics / Visual Sourcing / Video Editing</p>
            </div>
-
          </div>
        </div>
      </div>
    </section>
   </main>
+
   <footer id="contact" class="section-anchor section-rule">
      <div class="page-width py-16 md:py-24">
        <div class="grid gap-12 lg:grid-cols-2 items-start">
          
-         <!-- KALIWANG SIDE: TITLE AT EMAIL INFO -->
          <div class="reveal">
            <p data-template-id="contact-label" class="canva-text mb-5 text-xs font-semibold tracking-[.14em]" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 16px; letter-spacing: 0.14rem;">04 / CONTACT</p>
            <h2 data-template-id="contact-title" class="canva-text max-w-xl text-4xl font-bold leading-[1] tracking-[-.06em] md:text-6xl" style="color: rgb(17, 17, 17); font-weight: 700; font-size: 24px; letter-spacing: -0.06rem;">Have a project in mind?</h2>
@@ -579,8 +579,8 @@
            </p>
 
            <div class="mt-8 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-             <a data-template-id="email-link" class="canva-link focus-ring text-lg font-semibold tracking-[-.03em] underline decoration-1 underline-offset-8 transition-colors hover:text-[#2563EB] md:text-xl" href="mailto:your-email@gmail.com" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 20px;">
-            jasonmgln06@gmail.com
+             <a data-template-id="email-link" class="canva-link focus-ring text-lg font-semibold tracking-[-.03em] underline decoration-1 underline-offset-8 transition-colors hover:text-[#2563EB] md:text-xl" href="mailto:jasonmgln06@gmail.com" style="color: rgb(17, 17, 17); font-weight: 600; font-size: 20px;">
+              jasonmgln06@gmail.com
              </a> 
              <button id="copy-email" type="button" data-template-id="copy-email-button" class="canva-button focus-ring border border-[#111111] px-4 py-2 text-xs font-semibold tracking-[.08em] transition-colors hover:bg-[#111111] hover:text-[#F9F9FB]" style="background: rgb(249, 249, 251); color: rgb(17, 17, 17); font-weight: 600; font-size: 14px;">
                COPY EMAIL
@@ -588,11 +588,9 @@
            </div>
            <p id="copy-status" class="copy-message mt-3" role="status" aria-live="polite"></p>
          </div>
-<!-- KANANG SIDE: DIRECT CONTACT FORM -->
+
          <div class="reveal bg-white border border-[#E5E5E7] p-6 md:p-8 rounded-none shadow-sm">
            <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-5">
-             
-             <!-- Web3Forms Access Key -->
              <input type="hidden" name="access_key" value="84c2521e-8d60-4905-bc88-f5476bf3e1d7">
              
              <div>
@@ -623,7 +621,6 @@
 
        </div>
 
-<!-- FOOTER BOTTOM LINKS -->
         <div class="mt-20 flex flex-col justify-between gap-10 border-t border-[#E5E5E7] pt-6 md:flex-row md:items-end">
           <div>
             <nav aria-label="Social links" class="flex flex-wrap gap-x-6 gap-y-3">
@@ -648,7 +645,7 @@
         </button>
       </div>
 
-      <!-- MODAL: ABOUT ME / PROFILE DETAILS -->
+      <!-- MODAL: PROFILE -->
       <div id="modal-profile" class="modal-project" hidden="">
         <div class="grid md:grid-cols-2 items-stretch">
           <div class="modal-visual w-full min-h-[350px] md:min-h-full bg-[#111111]">
@@ -662,7 +659,6 @@
                 I am a passionate Graphic Designer & Visual Artist specializing in high-impact esports posters, cinematic photo manipulations, motion graphics, and social media branding.
               </p>
 
-              <!-- Quick Highlights -->
               <div class="mt-6 space-y-3 border-t border-[#E5E5E7] pt-5">
                 <div class="flex items-start gap-3">
                   <span class="text-[#2563EB] font-bold text-sm">✦</span>
@@ -686,7 +682,7 @@
         </div>
       </div>
 
-      <!-- MODAL 1: FORMA / ESPORT -->
+      <!-- MODAL 1 -->
       <div id="modal-forma" class="modal-project">
         <div class="grid md:grid-cols-2">
           <div class="project-visual">
@@ -703,7 +699,7 @@
         </div>
       </div>
 
-      <!-- MODAL 2: NOMA / AW-ASEN -->
+      <!-- MODAL 2 -->
       <div id="modal-noma" class="modal-project" hidden="">
         <div class="grid md:grid-cols-2">
           <div class="modal-visual relative group w-full min-h-[380px] md:min-h-full overflow-hidden bg-[#e5e5e7]">
@@ -718,14 +714,14 @@
             <div>
               <p data-template-id="modal-noma-meta" class="canva-text text-xs font-semibold tracking-[.12em]" style="color: rgb(37, 99, 235); font-weight: 600; font-style: normal; font-size: 16px; letter-spacing: 0.12rem;">SOCIAL MEDIA DESIGN / 2025</p>
               <h2 data-template-id="modal-noma-title" class="canva-text mt-4 text-4xl font-bold tracking-[-.06em]" style="color: rgb(17, 17, 17); font-weight: 700; font-style: normal; font-size: 24px; letter-spacing: -0.06rem;">AW - ASEN Falls Sigay at Ilocos Sur</h2>
-              <p data-template-id="modal-noma-copy" class="canva-text mt-6 leading-relaxed text-[#4f4f53]" style="color: rgb(79, 79, 83); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">A dynamic travel and eco-tourism promotional poster designed to showcase the natural beauty of Aw-Asen Falls in Sigay, Ilocos Sur. The design combines bold typography, scenic landscape photography, and layered wildlife elements to create an immersive, vibrant outdoor aesthetic.</p>
+              <p data-template-id="modal-noma-copy" class="canva-text mt-6 leading-relaxed text-[#4f4f53]" style="color: rgb(79, 79, 83); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">A dynamic travel and eco-tourism promotional poster designed to showcase the natural beauty of Aw-Asen Falls in Sigay, Ilocos Sur.</p>
             </div>
             <p data-template-id="modal-noma-scope" class="canva-text mt-10 border-t border-[#E5E5E7] pt-5 text-sm font-medium leading-relaxed" style="color: rgb(17, 17, 17); font-weight: 500; font-style: normal; font-size: 16px;">Scope: Social Media Design · Nature · Production</p>
           </div>
         </div>
       </div>
 
-      <!-- MODAL 3: AUTOMOTIVE -->
+      <!-- MODAL 3 -->
       <div id="modal-index" class="modal-project" hidden="">
         <div class="grid md:grid-cols-2">
           <div class="modal-visual relative group w-full min-h-[380px] md:min-h-full overflow-hidden bg-[#e5e5e7]">
@@ -740,14 +736,14 @@
             <div>
               <p data-template-id="modal-index-meta" class="canva-text text-xs font-semibold tracking-[.12em]" style="color: rgb(37, 99, 235); font-weight: 600; font-style: normal; font-size: 16px; letter-spacing: 0.12rem;">SOCIAL MEDIA DESIGN / 2025</p>
               <h2 data-template-id="modal-index-title" class="canva-text mt-4 text-4xl font-bold tracking-[-.06em]" style="color: rgb(17, 17, 17); font-weight: 700; font-style: normal; font-size: 24px; letter-spacing: -0.06rem;">Automotive Creative Ad</h2>
-              <p data-template-id="modal-index-copy" class="canva-text mt-6 leading-relaxed text-[#4f4f53]" style="color: rgb(79, 79, 83); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">A conceptual advertising poster and digital photo manipulation designed to promote off-road capability and the spirit of outdoor exploration. The piece juxtaposes modern city architecture with natural elements to tell a story of escaping routine and embracing nature.</p>
+              <p data-template-id="modal-index-copy" class="canva-text mt-6 leading-relaxed text-[#4f4f53]" style="color: rgb(79, 79, 83); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">A conceptual advertising poster and digital photo manipulation designed to promote off-road capability.</p>
             </div>
             <p data-template-id="modal-index-scope" class="canva-text mt-10 border-t border-[#E5E5E7] pt-5 text-sm font-medium leading-relaxed" style="color: rgb(17, 17, 17); font-weight: 500; font-style: normal; font-size: 16px;">Scope: Social Media Design · Automotive · Layout</p>
           </div>
         </div>
       </div>
 
-      <!-- MODAL 4: Jurassic -->
+      <!-- MODAL 4 -->
       <div id="modal-aperture" class="modal-project" hidden="">
         <div class="grid md:grid-cols-2">
           <div class="modal-visual w-full min-h-[350px] md:min-h-full">
@@ -757,14 +753,14 @@
             <div>
               <p data-template-id="modal-aperture-meta" class="canva-text text-xs font-semibold tracking-[.12em]" style="color: rgb(37, 99, 235); font-weight: 600; font-style: normal; font-size: 16px; letter-spacing: 0.12rem;">POSTER DESIGN / 2024</p>
               <h2 data-template-id="modal-aperture-title" class="canva-text mt-4 text-4xl font-bold tracking-[-.06em]" style="color: rgb(17, 17, 17); font-weight: 700; font-style: normal; font-size: 24px; letter-spacing: -0.06rem;">Jurassic: The Black Red Giant</h2>
-              <p data-template-id="modal-aperture-copy" class="canva-text mt-6 leading-relaxed text-[#4f4f53]" style="color: rgb(79, 79, 83); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">A cinematic movie poster and digital creature composite featuring a stylized "Black Red Brachiosaurus" in a prehistoric jungle setting. The project explores visual storytelling, large-scale typography integration, and atmospheric lighting commonly seen in Hollywood film promotional materials.</p>
+              <p data-template-id="modal-aperture-copy" class="canva-text mt-6 leading-relaxed text-[#4f4f53]" style="color: rgb(79, 79, 83); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">A cinematic movie poster and digital creature composite featuring a stylized "Black Red Brachiosaurus" in a prehistoric jungle setting.</p>
             </div>
             <p data-template-id="modal-aperture-scope" class="canva-text mt-10 border-t border-[#E5E5E7] pt-5 text-sm font-medium leading-relaxed" style="color: rgb(17, 17, 17); font-weight: 500; font-style: normal; font-size: 16px;">Scope: Business design · Data storytelling · Art direction</p>
           </div>
         </div>
       </div>
 
-      <!-- MODAL 5: BUSINESS MENU -->
+      <!-- MODAL 5 -->
       <div id="modal-business" class="modal-project" hidden="">
         <div class="grid md:grid-cols-2 items-stretch">
           <div class="modal-visual relative group w-full aspect-square overflow-hidden bg-[#F9F9FB] flex items-center justify-center">
@@ -790,14 +786,14 @@
             <div>
               <p data-template-id="modal-mono-meta" class="canva-text text-xs font-semibold tracking-[.12em]" style="color: rgb(37, 99, 235); font-weight: 600; font-style: normal; font-size: 16px; letter-spacing: 0.12rem;">BUSINESS POSTER DESIGN / 2024</p>
               <h2 data-template-id="modal-mono-title" class="canva-text mt-4 text-4xl font-bold tracking-[-.06em]" style="color: rgb(17, 17, 17); font-weight: 700; font-style: normal; font-size: 24px; letter-spacing: -0.06rem;">FOOD HUB MENU</h2>
-              <p data-template-id="modal-mono-copy" class="canva-text mt-6 leading-relaxed text-[#4f4f53]" style="color: rgb(79, 79, 83); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">A comprehensive and appetite-driven multi-item menu layout designed for a quick-service food business. The design organizes a diverse selection of rice bowl meals, combo pairings, and bulk platter options into a cohesive, customer-friendly format suitable for digital display and in-store print.</p>
+              <p data-template-id="modal-mono-copy" class="canva-text mt-6 leading-relaxed text-[#4f4f53]" style="color: rgb(79, 79, 83); font-weight: 400; font-style: normal; font-size: 16px; line-height: 1.6;">A comprehensive and appetite-driven multi-item menu layout designed for a quick-service food business.</p>
             </div>
             <p data-template-id="modal-mono-scope" class="canva-text mt-10 border-t border-[#E5E5E7] pt-5 text-sm font-medium leading-relaxed" style="color: rgb(17, 17, 17); font-weight: 500; font-style: normal; font-size: 16px;">Scope: Menu Design · Graphic Layout · Print</p>
           </div>
         </div>
       </div>
 
-      <!-- MODAL 6: BINI AIAH -->
+      <!-- MODAL 6 -->
       <div id="modal-field" class="modal-project" hidden="">
         <div class="grid md:grid-cols-2">
           <div class="modal-visual w-full min-h-[350px] md:min-h-full">
@@ -814,7 +810,7 @@
         </div>
       </div>
 
-      <!-- MODAL 7: BLUE SINGULARITY -->
+      <!-- MODAL 7 -->
       <div id="modal-netflix" class="modal-project" hidden="">
         <div class="grid md:grid-cols-2">
           <div class="modal-visual w-full min-h-[350px] md:min-h-full">
@@ -831,7 +827,7 @@
         </div>
       </div>
 
-      <!-- MODAL 8: PREDATOR -->
+      <!-- MODAL 8 -->
       <div id="modal-predator" class="modal-project" hidden="">
         <div class="grid md:grid-cols-2">
           <div class="modal-visual w-full min-h-[350px] md:min-h-full">
@@ -848,7 +844,7 @@
         </div>
       </div>
 
-      <!-- MODAL 9 (Slider: 25.jpg & 26.jpg) -->
+      <!-- MODAL 9 -->
       <div id="modal-project9" class="modal-project" hidden="">
         <div style="display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; width: 100%;">
           <div style="position: relative; width: 100%; min-height: 400px; background: #e5e5e7; overflow: hidden;">
@@ -861,16 +857,16 @@
           </div>
           <div style="display: flex; flex-direction: column; justify-content: space-between; padding: 2.5rem; background: white;">
             <div>
-              <p style="color: #2563EB; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;">POSTER DESIGN / 2026</p>
+              <p style="color: #2563EB; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;">POSTER DESIGN / 2025</p>
               <h2 style="color: #111111; font-weight: 700; font-size: 2.25rem; margin-top: 1rem; line-height: 1.1;">BMW M3 E36: Urban Anime Street Style Automotive Concept</h2>
-              <p style="color: #4f4f53; font-size: 1rem; margin-top: 1.5rem; line-height: 1.6;">A stylized automotive lifestyle poster featuring a modified mint-green BMW M3 coupe parked in a moody, forest-edge environment. The design blends street-culture graffiti typography, anime character placement, and clean vehicle showcase elements to create a modern, high-energy fusion of automotive culture and graphic art.</p>
+              <p style="color: #4f4f53; font-size: 1rem; margin-top: 1.5rem; line-height: 1.6;">A stylized automotive lifestyle poster featuring a modified mint-green BMW M3 coupe parked in a moody, forest-edge environment.</p>
             </div>
             <p style="color: #111111; font-weight: 500; font-size: 0.875rem; border-top: 1px solid #E5E5E7; padding-top: 1.25rem; margin-top: 2rem;">Scope: Poster Design · Layout · Art Direction</p>
           </div>
         </div>
       </div>
 
-      <!-- MODAL 10 (Slider: 27.jpg & 28.jpg) -->
+      <!-- MODAL 10 -->
       <div id="modal-project10" class="modal-project" hidden="">
         <div style="display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; width: 100%;">
           <div style="position: relative; width: 100%; min-height: 400px; background: #e5e5e7; overflow: hidden;">
@@ -883,16 +879,16 @@
           </div>
           <div style="display: flex; flex-direction: column; justify-content: space-between; padding: 2.5rem; background: white;">
             <div>
-              <p style="color: #2563EB; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;">POSTER DESIGN / 2026</p>
+              <p style="color: #2563EB; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;">POSTER DESIGN / 2025</p>
               <h2 style="color: #111111; font-weight: 700; font-size: 2.25rem; margin-top: 1rem; line-height: 1.1;">Tecno Pova 7 Ultra: Gaming Smartphone Campaign Poster</h2>
-              <p style="color: #4f4f53; font-size: 1rem; margin-top: 1.5rem; line-height: 1.6;">A commercial tech and gaming concept poster designed to highlight mobile performance and action-oriented features. The layout integrates a high-end smartphone product cutout with dynamic tactical gaming characters, battle-scarred vehicles, and an aggressive battlefield environment to appeal to mobile gamers and tech enthusiasts.</p>
+              <p style="color: #4f4f53; font-size: 1rem; margin-top: 1.5rem; line-height: 1.6;">A commercial tech and gaming concept poster designed to highlight mobile performance and action-oriented features.</p>
             </div>
             <p style="color: #111111; font-weight: 500; font-size: 0.875rem; border-top: 1px solid #E5E5E7; padding-top: 1.25rem; margin-top: 2rem;">Scope: Poster Design · Layout · Art Direction</p>
           </div>
         </div>
       </div>
 
-      <!-- MODAL 11 (Single: 29.jpg) -->
+      <!-- MODAL 11 -->
       <div id="modal-project11" class="modal-project" hidden="">
         <div class="grid md:grid-cols-2">
           <div class="modal-visual w-full min-h-[350px] md:min-h-full">
@@ -900,16 +896,16 @@
           </div>
           <div class="flex flex-col justify-between p-6 md:p-9 bg-white">
             <div>
-              <p class="canva-text text-xs font-semibold tracking-[.12em]" style="color: rgb(37, 99, 235); font-weight: 600; font-size: 16px;">POSTER DESIGN / 2026</p>
+              <p class="canva-text text-xs font-semibold tracking-[.12em]" style="color: rgb(37, 99, 235); font-weight: 600; font-size: 16px;">POSTER DESIGN / 2024</p>
               <h2 class="canva-text mt-4 text-4xl font-bold tracking-[-.06em]" style="color: rgb(17, 17, 17); font-weight: 700; font-size: 24px;">Black Panther: Jungle Predator Key Art Concept</h2>
-              <p class="canva-text mt-6 leading-relaxed text-[#4f4f53]" style="color: rgb(79, 79, 83); font-size: 16px;">A cinematic character key art design featuring a colossal, glowing-eyed panther looming over an explorer in a dense, fog-filled jungle. The piece utilizes high-contrast rim lighting, deep atmospheric shadows, and bold background typography intertwined with the subject to create a powerful sense of scale, mystery, and impending danger.</p>
+              <p class="canva-text mt-6 leading-relaxed text-[#4f4f53]" style="color: rgb(79, 79, 83); font-size: 16px;">A cinematic character key art design featuring a colossal, glowing-eyed panther looming over an explorer in a dense, fog-filled jungle.</p>
             </div>
             <p class="canva-text mt-10 border-t border-[#E5E5E7] pt-5 text-sm font-medium" style="color: rgb(17, 17, 17); font-weight: 500;">Scope: Poster Design · Layout · Art Direction</p>
           </div>
         </div>
       </div>
 
-      <!-- MODAL 12 (Single: 30.jpg) -->
+      <!-- MODAL 12 -->
       <div id="modal-project12" class="modal-project" hidden="">
         <div class="grid md:grid-cols-2">
           <div class="modal-visual w-full min-h-[350px] md:min-h-full">
@@ -919,9 +915,48 @@
             <div>
               <p class="canva-text text-xs font-semibold tracking-[.12em]" style="color: rgb(37, 99, 235); font-weight: 600; font-size: 16px;">POSTER DESIGN / 2026</p>
               <h2 class="canva-text mt-4 text-4xl font-bold tracking-[-.06em]" style="color: rgb(17, 17, 17); font-weight: 700; font-size: 24px;">The Last Voyage: Cinematic Space & Sea Concept Poster</h2>
-              <p class="canva-text mt-6 leading-relaxed text-[#4f4f53]" style="color: rgb(79, 79, 83); font-size: 16px;">A conceptual digital poster combining elements of maritime adventure with deep-space science fiction. The composition features a classic sailing ship navigating stormy, mystical waters beneath an ethereal cosmic aurora and glowing mountain peaks. Designed with dramatic atmospheric lighting, crisp title typography, and streaming-style platform branding to evoke a high-stakes dramatic narrative.</p>
+              <p class="canva-text mt-6 leading-relaxed text-[#4f4f53]" style="color: rgb(79, 79, 83); font-size: 16px;">A conceptual digital poster combining elements of maritime adventure with deep-space science fiction.</p>
             </div>
             <p class="canva-text mt-10 border-t border-[#E5E5E7] pt-5 text-sm font-medium" style="color: rgb(17, 17, 17); font-weight: 500;">Scope: Poster Design · Layout · Art Direction</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL 13 -->
+      <div id="modal-project13" class="modal-project" hidden="">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; width: 100%;">
+          <div style="position: relative; width: 100%; min-height: 400px; background: #e5e5e7; overflow: hidden;">
+            <div id="modal-slider-proj13" style="display: flex; width: 100%; height: 100%; transition: transform 0.5s ease;">
+              <img src="31.jpg" alt="Slide 1" style="width: 100%; height: 100%; object-fit: cover; flex-shrink: 0;" />
+              <img src="32.jpg" alt="Slide 2" style="width: 100%; height: 100%; object-fit: cover; flex-shrink: 0;" />
+            </div>
+            <button type="button" id="slider-proj13-prev" style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); z-index: 10; background: rgba(0,0,0,0.7); color: white; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-weight: bold;">❮</button>
+            <button type="button" id="slider-proj13-next" style="position: absolute; right: 12px; top: 50%; transform: translateY(-50%); z-index: 10; background: rgba(0,0,0,0.7); color: white; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-weight: bold;">❯</button>
+          </div>
+          <div style="display: flex; flex-direction: column; justify-content: space-between; padding: 2.5rem; background: white;">
+            <div>
+              <p style="color: #2563EB; font-weight: 600; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;">ESPORT POSTER DESIGN / 2025</p>
+              <h2 style="color: #111111; font-weight: 700; font-size: 2.25rem; margin-top: 1rem; line-height: 1.1;">ESPORTS TOURNAMENT ROSTER POSTER</h2>
+              <p style="color: #4f4f53; font-size: 1rem; margin-top: 1.5rem; line-height: 1.6;">Designed competitive esports roster and team announcement posters optimized for tournament marketing and social media engagement.</p>
+            </div>
+            <p style="color: #111111; font-weight: 500; font-size: 0.875rem; border-top: 1px solid #E5E5E7; padding-top: 1.25rem; margin-top: 2rem;">Scope: Esport Poster Design · Layout · Art Direction</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODAL 14 (Single: 33.jpg) -->
+      <div id="modal-project14" class="modal-project" hidden="">
+        <div class="grid md:grid-cols-2">
+          <div class="modal-visual w-full min-h-[350px] md:min-h-full">
+            <img src="33.jpg" alt="Project 14 Preview" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="flex flex-col justify-between p-6 md:p-9 bg-white">
+            <div>
+              <p class="canva-text text-xs font-semibold tracking-[.12em]" style="color: rgb(37, 99, 235); font-weight: 600; font-size: 16px;">ESPORT POSTER / 2025</p>
+              <h2 class="canva-text mt-4 text-4xl font-bold tracking-[-.06em]" style="color: rgb(17, 17, 17); font-weight: 700; font-size: 24px;">Team Liquid PH vs. Team Falcon PH: Home of Champions Esports Poster</h2>
+              <p class="canva-text mt-6 leading-relaxed text-[#4f4f53]" style="color: rgb(79, 79, 83); font-size: 16px;">A competitive esports matchup poster featuring a split-screen player composition between Team Liquid PH and Team Falcon PH. The layout highlights the tournament details ("Match 1 | BO5 | October 22") alongside bold, stylized typography reading "Home of Champions" integrated with a prestigious league crest medallion and a dark, moody background.</p>
+            </div>
+            <p class="canva-text mt-10 border-t border-[#E5E5E7] pt-5 text-sm font-medium" style="color: rgb(17, 17, 17); font-weight: 500;">Scope: Esport Poster Design · Layout · Art Direction</p>
           </div>
         </div>
       </div>
@@ -974,7 +1009,6 @@
         prevBtn13.addEventListener("click", (e) => { e.stopPropagation(); currentIdx13 = (currentIdx13 - 1 + totalSlides13) % totalSlides13; updateSlider13(); });
       }
 
-      // Slider para sa Modal 9
       const trackProj9 = document.getElementById("modal-slider-proj9");
       const prevProj9 = document.getElementById("slider-proj9-prev");
       const nextProj9 = document.getElementById("slider-proj9-next");
@@ -986,7 +1020,6 @@
         prevProj9.addEventListener("click", (e) => { e.stopPropagation(); idx9 = (idx9 - 1 + total9) % total9; update9(); });
       }
 
-      // Slider para sa Modal 10
       const trackProj10 = document.getElementById("modal-slider-proj10");
       const prevProj10 = document.getElementById("slider-proj10-prev");
       const nextProj10 = document.getElementById("slider-proj10-next");
@@ -996,6 +1029,17 @@
         function update10() { trackProj10.style.transform = `translateX(-${idx10 * 100}%)`; }
         nextProj10.addEventListener("click", (e) => { e.stopPropagation(); idx10 = (idx10 + 1) % total10; update10(); });
         prevProj10.addEventListener("click", (e) => { e.stopPropagation(); idx10 = (idx10 - 1 + total10) % total10; update10(); });
+      }
+
+      const trackProj13 = document.getElementById("modal-slider-proj13");
+      const prevProj13 = document.getElementById("slider-proj13-prev");
+      const nextProj13 = document.getElementById("slider-proj13-next");
+      if (trackProj13 && prevProj13 && nextProj13) {
+        let idx13 = 0;
+        const total13 = trackProj13.children.length;
+        function update13() { trackProj13.style.transform = `translateX(-${idx13 * 100}%)`; }
+        nextProj13.addEventListener("click", (e) => { e.stopPropagation(); idx13 = (idx13 + 1) % total13; update13(); });
+        prevProj13.addEventListener("click", (e) => { e.stopPropagation(); idx13 = (idx13 - 1 + total13) % total13; update13(); });
       }
 
       const indexTrack = document.getElementById("modal-index-track");
@@ -1071,12 +1115,12 @@
             last.focus();
           } else if (!event.shiftKey && document.activeElement === last) {
             event.preventDefault();
-            first.focus();
+            last.focus();
           }
         }
       });
 
-      const email = "hello@alexmori.studio";
+      const email = "jasonmgln06@gmail.com";
       const copyButton = document.getElementById("copy-email");
       const copyStatus = document.getElementById("copy-status");
 
